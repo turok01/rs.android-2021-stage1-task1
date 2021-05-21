@@ -6,12 +6,12 @@ class BillCounter {
     // The output could be "Bon Appetit" or the string with number(e.g "10")
     fun calculateFairlySplit(bill: IntArray, k: Int, b: Int): String {
         //throw NotImplementedError("Not implemented")
-        var billAmount: Int = 0;
-        for (i in 0..bill.size - 1) {
-            billAmount+=bill[i];
+        var billAmount = 0
+        for (i in 0 until bill.size) {
+            billAmount+=bill[i]
         }
-        billAmount -= bill[k];
-        var difference: Int = b - billAmount/2
+        billAmount -= bill[k]
+        val difference: Int = b - billAmount/2
         if (difference == 0)
             return "Bon Appetit"
         else
